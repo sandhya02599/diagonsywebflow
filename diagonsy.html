@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>diagonsy</title>
+    <style>
+        .C{
+            background-color: #e9f1ff;
+            height: 500px;
+        }
+        .C1{
+            text-align: center;
+            padding-top: 20px;
+        }
+        .C1 h4{
+            font-weight: lighter;
+            font-size: 23px;
+        }
+        .C1 h1{
+            font-weight: bold;
+            font-size: 65px;
+            margin-top: -10px;
+        }
+        .C1 p{
+            font-size: 22px;
+            font-weight: lighter;
+            color: rgb(97, 96, 96);
+        }
+        .A1 h4{
+            color: rgb(54, 54, 54);
+            font-size: 18px;
+            margin-top: 120px;
+        }
+        .A1 h1{
+            font-size: 40px;
+        }
+        .A1 p{
+            font-size: 20px;
+            color: rgb(94, 91, 91);
+        }
+        .A2 h4{
+            font-size: 24px;
+            margin-top: 30px;
+        }
+        .A2 p{
+            color: rgb(71, 69, 69);
+            font-size: 17px;
+        }
+        .A3 h4{
+            font-size: 24px;
+            margin-top: 30px;
+        }
+        .A3 p{
+            color: rgb(97, 92, 92);
+            font-size: 17px;
+        }
+        .A4 h4{
+            font-size: 24px;
+            margin-top: 30px;
+        }
+        .A4 p{
+            color: rgb(73, 70, 70);
+            font-size: 17px;
+        }
+        .F{
+            display: flex;
+            column-gap: 30px;
+            margin-right: 100px;
+        }
+        .A{
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            margin-left: 150px;
+        }
+        .D1 h3{
+            font-size: 30px;
+            margin-top: 110px;
+        }
+        .D1 p{
+            font-size: 19px;
+            color: rgb(95, 93, 93) ;
+        }
+        .D2 input{
+            width: 250px;
+            height: 50px;
+            margin-bottom: 30px;
+        } 
+        .D3 input{
+            width: 250px;
+            height: 50px;
+            margin-bottom: 30px;
+        }
+        .D4 input{
+            width: 540px;
+            height: 200px;
+            margin-bottom: 30px;
+        } 
+        .D5 button{
+            border-color:rgb(49, 5, 245);
+            padding: 20px 20px;
+            background-color: rgb(48, 3, 250);
+            color: white;
+            margin-left: 2px;
+            display: flex;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .G{
+            text-align: center;
+            padding-left:300px;
+            margin-top: 100px;
+        }
+        .G1 h5{
+            font-size: 19px;
+            color: rgb(80, 76, 76);
+            margin-right: -150px;
+        }
+        .G2 h2{
+            font-size: 30px;
+            font-weight: bold;
+            margin-right: -150px;
+        }
+        /* #accordion{
+            width: 500px;
+        }
+        #accordion li{
+            list-style: none;
+            width: 500px;
+            margin-bottom: 10px;
+            background-color: aqua;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        #accordion li label{
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 18px;
+            font-weight: 500px;
+            cursor: pointer;
+            color: black;
+        }
+        #accordion li label span{
+            transform: rotate(90deg);
+            font-size: 22px;
+            color: black;
+        }
+        #accordion label + input[type="radio"]{
+            display: none;
+        }
+        #accordion content{
+            padding: 0 10px;
+            line-height: 26px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s;
+
+        }
+        #accordion label + input[type="radio"] :checked + .content{
+            max-height: 400px;
+        } */
+
+
+    .K {
+        width: 2500px;
+        margin-left: 250px;
+        font-family: Arial, sans-serif;
+        display: flex;
+        column-gap: 50px;
+        margin-bottom: 70px;
+    }
+
+    .K1 ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .K1 li {
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-bottom: 40px;
+    }
+
+    .K1 label {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        background-color: #f7f7f7;
+        cursor: pointer;
+        font-size: 18px;
+        background-color: #D1E1FF;
+    }
+
+    .K1 input[type="radio"] {
+        display: none;
+        margin-bottom: 30px;
+    }
+
+    .K1 input[type="radio"]:checked ~ .content {
+        max-height: 200px;
+        padding: 15px;
+    }
+
+    .K1 .content {
+        max-height: 0;
+        overflow: hidden;
+        background-color: #fff;
+        transition: max-height 0.3s ease;
+    }
+
+    .K1 .content p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    .K2 ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .K2 li {
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-bottom: 40px;
+    }
+
+    .K2 label {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        background-color: #f7f7f7;
+        cursor: pointer;
+        font-size: 18px;
+        background-color: #D1E1FF;
+    }
+
+    .K2 input[type="radio"] {
+        display: none;
+    }
+
+    .K2 input[type="radio"]:checked ~ .content {
+        max-height: 200px;
+        padding: 15px;
+    }
+
+    .K2 .content {
+        max-height: 0;
+        overflow: hidden;
+        background-color: #fff;
+        transition: max-height 0.3s ease;
+    }
+
+    .K2 .content p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    .Newsletter{
+        display: flex;
+        margin-top: 150px;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding-left: 50px;
+        border-radius: 10px;
+        background-color: rgb(230, 253, 253);
+    }
+    .N2 img{
+        height:300px;
+        width:500px; 
+        padding-left: 100px;
+        padding-top: 50px;
+    }
+    .Z1 h4{
+        font-size: 25px;
+    }
+    .Z1 h1{
+        font-size: 50px;
+    }
+    .Z1 p{
+        font-size:25px;
+    }
+
+    </style>
+</head>
+<body>
+<div class="Contaniter">
+    <div class="C">
+        <div class="C1">
+            <h4>CONTACT</h4>
+            <h1>Contact Information</h1>
+            <p>Diagnosy always help to provide proper treatment for all of get<br>proper cure and healty life which is the most focus thing</p>
+        </div>
+    </div>
+    <div class="A">
+        <div class="A1">
+         <div class="A9">
+            <h4>CONTACT WITH US</h4>
+            <h1>Contact Information</h1>
+            <p>Diagnosy always help to provide proper treatment for of<br> get the proper cure and health life which is the perate<br> focus thing for us patient our main propriety</p>
+         </div>
+         <div class="A2">
+            <h4>Address</h4>
+            <p>256/A, Central Park, Monticarlo<br> Main Town, New York City</p>
+         </div>
+         <div class="A3">
+            <h4>Web & Mail</h4>
+            <p>info@examples.com<br>
+                admin@examples.com</p>
+         </div>
+         <div class="A4">
+            <h4>Phone</h4>
+            <p>+12345 678 910<br>
+                +12345 678 910</p>
+        </div>
+       </div>
+        <div class="D">
+            <div class="D1">
+                <h3>Send Message</h3>
+                <p>Diagnosy always help to provide proper treatment<br> of get the proper cure and health life services</p>
+            </div>
+          <div class="F">
+            <div class="D2">
+                <input type="text" placeholder="Name"><br>
+                <input type="text" placeholder="Email">
+            </div>
+            <div class="D3">
+                <input type="text" placeholder="Phone"><br>
+                <input type="text" placeholder="Subject">
+            </div>
+          </div> 
+          <div class="D4">
+            <input type="text" placeholder="Write messages here">
+          </div>
+          <div class="D5">
+                <button>Send Messages</button> 
+          </div>  
+        </div>
+        <div class="G">
+            <div class="G1">
+                <h5>FAQ</h5>
+            </div>
+            <div class="G2">
+                <h2>Frequently Asked Question</h2>
+            </div>
+        </div>
+    </div>
+    <div class="K">
+        <div class="K1">
+            <lu id="accordion">
+                <li>
+                    <label for="first">Why choose our medical for your family?<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="first" checked>
+                    <div class="content">
+                        <p>
+                            Diagnosy always try to provide the most common of get the prope<br> for cure Healthcare are most popular package. You can  check-up<br> body very small period of time and we send you report online.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <label for="second">How to get Appointment for Emergency?<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="second">
+                    <div class="content">
+                        <p>
+                            Diagnosy always try to provide the most common of get the prope<br> for cure Healthcare are most popular package. You can  check-up<br> body very small period of time and we send you report online.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <label for="third">Will vitamin D save my Life?<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="third">
+                    <div class="content">
+                        <p>
+                            Diagnosy always try to provide the most common of get the prope<br> for cure Healthcare are most popular package. You can  check-up<br> body very small period of time and we send you report online.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <label for="four">Is Lab instrument are latest and modern?<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="four">
+                    <div class="content">
+                        <p>
+                            Diagnosy always try to provide the most common of get the prope<br> for cure Healthcare are most popular package. You can  check-up<br> body very small period of time and we send you report online.
+                        </p>
+                    </div>
+                </li>
+            </lu>
+        </div>
+        <div class="K2">
+            <lu id="accordion">
+                <li>
+                    <label for="first">Why choose our medical for your family?<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="first" checked>
+                    <div class="content">
+                        <p>
+                            Diagnosy always try to provide the most common of get the prope<br> for cure Healthcare are most popular package. You can  check-up<br> body very small period of time and we send you report online.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <label for="second">How to get Appointment for Emergency?<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="second">
+                    <div class="content">
+                        <p>
+                            Diagnosy always try to provide the most common of get the prope<br> for cure Healthcare are most popular package. You can  check-up<br> body very small period of time and we send you report online.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <label for="third">Will vitamin D save my Life?<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="third">
+                    <div class="content">
+                        <p>
+                            Diagnosy always try to provide the most common of get the prope<br> for cure Healthcare are most popular package. You can  check-up<br> body very small period of time and we send you report online.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <label for="four">Is Lab instrument are latest and modern?<span>&#x3e;</span></label>
+                    <input type="radio" name="accordion" id="four">
+                    <div class="content">
+                        <p>
+                            Diagnosy always try to provide the most common of get the prope<br> for cure Healthcare are most popular package. You can  check-up<br> body very small period of time and we send you report online.
+                        </p>
+                    </div>
+                </li>
+            </lu>
+        </div>
+    </div>
+    <div class="Newsletter">
+        <div class="Z1">
+            <h4>NEWSLETTER</h4>
+            <h1>Subscribe Our Newsletter</h1>
+            <p>To get latest updates, News, Technology we use and offers</p>
+        </div>
+        <div class="Z2">
+            <img src="images/img.webp">
+    </div>
+    </div>
+</div>
+</body>
+</html>
